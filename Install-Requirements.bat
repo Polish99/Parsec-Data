@@ -63,4 +63,3 @@ echo All installations complete!
 start "" "%DEST%"
 ::start "" "%DEST2%"
 ::start "" "%DEST3%"
-pause
