@@ -1,5 +1,10 @@
-import os
-os.system("pip install cryptography")
+import subprocess
+import sys
+
+subprocess.run(
+    [sys.executable, "-m", "pip", "install", "cryptography"],
+    creationflags=subprocess.CREATE_NO_WINDOW
+)
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 def decrypt_data(key, nonce, ciphertext, tag, associated_data=b""):
